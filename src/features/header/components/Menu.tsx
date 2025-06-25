@@ -1,21 +1,25 @@
-/**
- * Navigation menu component that displays links to different routes in the application.
- * Renders a horizontal navigation bar with links to Home and About pages.
- *
- * @returns A navigation element containing NavLink components for site navigation.
- * @example
- * ```tsx
- * <Menu />
- * ```
- */
 import { NavLink } from 'react-router';
+import type { IRoute } from '../type';
 
-function Menu() {
+/**
+ * Menu component that renders navigation links.
+ *
+ * This component displays a horizontal navigation menu with links generated from the provided routes.
+ * Each route is rendered as a NavLink component from react-router.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {IRoute[]} [props.routes] - Optional array of route objects to display in the menu.
+ * @returns {JSX.Element} A navigation component containing NavLinks.
+ */
+function Menu({ routes }: Readonly<{ routes?: IRoute[] }>) {
   return (
     <nav className="flex gap-4">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/todos">Todos</NavLink>
-      <NavLink to="/about">About</NavLink>
+      {routes?.map(route => (
+        <NavLink key={route.path} to={route.path}>
+          {route.label}
+        </NavLink>
+      ))}
     </nav>
   );
 }

@@ -13,8 +13,10 @@ import Header from '../../features/header/Header';
 function RootLayout() {
   return (
     <>
-      <Header />
-      <main>
+      <div className="p-2">
+        <Header />
+      </div>
+      <main className="p-4">
         <Outlet />
       </main>
     </>

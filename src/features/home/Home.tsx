@@ -6,7 +6,7 @@
 function Home() {
   return (
     <div>
-      This is a react-template project using :
+      <p>This is a react-template project using :</p>
       <ul className="list-disc list-inside ml-4">
         <li>React</li>
         <li>React Router</li>
