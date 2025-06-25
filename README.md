@@ -38,6 +38,8 @@ src/
 - [x] React Route in Data mode <https://reactrouter.com/start/data/custom>
 - [x] Redux with RTK Query <https://redux.js.org/> <https://redux-toolkit.js.org/tutorials/rtk-query>
 - [x] Husky for lint and conventional commit <https://typicode.github.io/husky/> (commitlint <https://commitlint.js.org/>)
+- [x] Storybook 9 (`npx storybook@latest init`)
+- [ ] Mock Service Worker (MSW)
 - [ ] crako ?
 
 ## Guide

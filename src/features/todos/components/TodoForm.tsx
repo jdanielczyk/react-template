@@ -45,7 +45,7 @@ function TodoForm({
   onCancel,
 }: Readonly<TodoFormProps>) {
   return (
-    <form onSubmit={handleSubmit} className="flex p-3stringify gap-2 items-center mb-4">
+    <form onSubmit={handleSubmit} className="flex p-3 gap-2 items-end mb-4 ">
       <CustomInput
         type="text"
         placeholder="Add a new todo"
